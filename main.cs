@@ -245,23 +245,23 @@ namespace Laboratory
 
     public Matrix(int sizeX, int sizeY)
     {
-        this.sizeX = sizeX;
-        this.sizeY = sizeY;
-        value = new int[sizeX, sizeY];
-        Random random = new Random();
+      this.sizeX = sizeX;
+      this.sizeY = sizeY;
+      value = new int[sizeX, sizeY];
+      Random random = new Random();
         
-        for (int i = 0; i < sizeX; ++i)
-            for (int j = 0; j < sizeY; ++j)
-                value[i, j] = random.Next(-10, 10);
+      for (int i = 0; i < sizeX; ++i)
+        for (int j = 0; j < sizeY; ++j)
+          value[i, j] = random.Next(-10, 10);
     }
     public object Clone()
     {
-        Matrix copy = new Matrix(sizeX, sizeY);
-        for (int i = 0; i < sizeX; ++i)
-            for (int j = 0; j < sizeY; ++j)
-                copy.value[i, j] = this.value[i, j];
+      Matrix copy = new Matrix(sizeX, sizeY);
+      for (int i = 0; i < sizeX; ++i)
+        for (int j = 0; j < sizeY; ++j)
+          copy.value[i, j] = this.value[i, j];
         
-        return copy;
+      return copy;
     }
     public Matrix operator +(Matrix matrix1, Matrix matrix2)
     {
