@@ -8,19 +8,19 @@ namespace Laboratory
 {
   class Program
   {
+    public Matrix CreateMatrix()
+    {
+      Console.WriteLine("Введите размер матрицы (строки x столбцы):");
+      int sizeX = int.Parse(Console.ReadLine());
+      int sizeY = int.Parse(Console.ReadLine());
+      return new Matrix(sizeX, sizeY);
+    }
     static void Main()
     {
       Console.WriteLine("Матричный калькулятор.");
-
-      Console.WriteLine("Введите размер первой матрицы (строки x столбцы):");
-      int sizeX1 = int.Parse(Console.ReadLine());
-      int sizeY1 = int.Parse(Console.ReadLine());
-      Matrix matrix1 = new Matrix(sizeX1, sizeY1);
-
-      Console.WriteLine("Введите размер второй матрицы (строки x столбцы):");
-      int sizeX2 = int.Parse(Console.ReadLine());
-      int sizeY2 = int.Parse(Console.ReadLine());
-      Matrix matrix2 = new Matrix(sizeX2, sizeY2);
+      
+      Matrix matrix1 = CreateMatrix();
+      Matrix matrix2 = CreateMatrix();
 
       Console.WriteLine("\nПервая матрица:");
       Console.WriteLine(matrix1.ToString());
