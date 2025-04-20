@@ -257,10 +257,11 @@ namespace Laboratory
     public object Clone()
     {
       Matrix copy = new Matrix(sizeX, sizeY);
-      for (int i = 0; i < sizeX; ++i)
-        for (int j = 0; j < sizeY; ++j)
+      for (int i = 0; i < sizeX; ++i){
+        for (int j = 0; j < sizeY; ++j){
           copy.value[i, j] = this.value[i, j];
-        
+        }
+      }
       return copy;
     }
     public Matrix operator + (Matrix matrix1, Matrix matrix2)
