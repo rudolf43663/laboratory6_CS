@@ -263,7 +263,7 @@ namespace Laboratory
         
       return copy;
     }
-    public Matrix operator +(Matrix matrix1, Matrix matrix2)
+    public Matrix operator + (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       Matrix result = new Matrix();
@@ -277,7 +277,7 @@ namespace Laboratory
       return result;
     }
     
-    public Matrix operator *(Matrix matrix1, Matrix matrix2)
+    public Matrix operator * (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       Matrix result = new Matrix();
@@ -290,7 +290,7 @@ namespace Laboratory
       }
       return result;
     }
-    public bool operator >(Matrix matrix1, Matrix matrix2)
+    public bool operator > (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       int sum1 = 0;
@@ -305,7 +305,7 @@ namespace Laboratory
       }
       return sum1 > sum2;
     }
-    public bool operator <(Matrix matrix1, Matrix matrix2)
+    public bool operator < (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       int sum1 = 0;
@@ -320,7 +320,7 @@ namespace Laboratory
       }
       return sum1 < sum2;
     }
-    public bool operator <=(Matrix matrix1, Matrix matrix2)
+    public bool operator <= (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       int sum1 = 0;
@@ -335,7 +335,7 @@ namespace Laboratory
       }
       return sum1 <= sum2;
     }
-    public bool operator >=(Matrix matrix1, Matrix matrix2)
+    public bool operator >= (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       int sum1 = 0;
@@ -350,7 +350,7 @@ namespace Laboratory
       }
       return sum1 >= sum2;
     }
-    public bool operator ==(Matrix matrix1, Matrix matrix2)
+    public bool operator == (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       int sum1 = 0;
@@ -365,7 +365,7 @@ namespace Laboratory
       }
       return sum1 == sum2;
     }
-    public bool operator !=(Matrix matrix1, Matrix matrix2)
+    public bool operator != (Matrix matrix1, Matrix matrix2)
     {
       if (matrix1.Size != matrix2.Size) throw new MatrixSizeMismatchException();
       int sum1 = 0;
@@ -380,7 +380,7 @@ namespace Laboratory
       }
       return sum1 != sum2;
     }
-    public explicit operator double[,](Matrix matrix)
+    public explicit operator double[,] (Matrix matrix)
     {
       double[,] result = new double[sizeX, sizeY];
       for (int i = 0; i < sizeX; ++i)
@@ -392,7 +392,7 @@ namespace Laboratory
       }
       return result;
     }
-    public bool operator true(Matrix matrix)
+    public bool operator true (Matrix matrix)
     {
       Matrix result = new Matrix();
       int sum = 0;
@@ -410,7 +410,7 @@ namespace Laboratory
         return false;
       }
     }
-    public bool operator false(Matrix matrix)
+    public bool operator false (Matrix matrix)
     {
       Matrix result = new Matrix();
       int sum = 0;
